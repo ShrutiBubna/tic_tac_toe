@@ -14,9 +14,6 @@ const playerOScore = document.querySelector("#player-o-score");
 const drawScore = document.querySelector("#draw-score");
 
 
-// ===============================
-// Game Variables
-// ===============================
 
 let isOTurn = true;
 let moveCount = 0;
@@ -25,10 +22,6 @@ let xScore = 0;
 let oScore = 0;
 let draws = 0;
 
-
-// ===============================
-// Winning Patterns
-// ===============================
 
 const winPatterns = [
 
@@ -45,10 +38,6 @@ const winPatterns = [
 
 ];
 
-
-// ===============================
-// Update Turn Indicator
-// ===============================
 
 function updateTurnIndicator(){
 
@@ -67,9 +56,6 @@ function updateTurnIndicator(){
 }
 
 
-// ===============================
-// le All Boxes
-// ===============================
 
 function enableBoxes(){
 
@@ -88,9 +74,6 @@ function enableBoxes(){
 }
 
 
-// ===============================
-// Disable All Boxes
-// ===============================
 
 function disableBoxes(){
 
@@ -102,10 +85,6 @@ function disableBoxes(){
 
 }
 
-
-// ===============================
-// Reset Current Match
-// ===============================
 
 function resetGame(){
 
@@ -122,9 +101,6 @@ function resetGame(){
 }
 
 
-// ===============================
-// Reset Complete Scoreboard
-// ===============================
 
 function resetScoreBoard(){
 
@@ -140,10 +116,6 @@ function resetScoreBoard(){
 
 }
 
-
-// ===============================
-// Box Click Event
-// ===============================
 
 boxes.forEach((box)=>{
 
@@ -169,7 +141,6 @@ boxes.forEach((box)=>{
 
         moveCount++;
 
-        // Winner check will be in Part 2
         const winnerFound = checkWinner();
 
 if(winnerFound){
@@ -195,10 +166,6 @@ updateTurnIndicator();
 });
 
 
-// ===============================
-// Button Events
-// ===============================
-
 resetBtn.addEventListener("click", resetGame);
 
 newGameBtn.addEventListener("click", resetGame);
@@ -206,15 +173,9 @@ newGameBtn.addEventListener("click", resetGame);
 resetScoreBtn.addEventListener("click", resetScoreBoard);
 
 
-// ===============================
-// Initial Function Call
-// ===============================
 
 updateTurnIndicator();
 
-// ===============================
-// Show Winner
-// ===============================
 
 function showWinner(winner){
 
@@ -243,9 +204,6 @@ function showWinner(winner){
 }
 
 
-// ===============================
-// Show Draw
-// ===============================
 
 function showDraw(){
 
@@ -262,9 +220,6 @@ function showDraw(){
 }
 
 
-// ===============================
-// Check Winner
-// ===============================
 
 function checkWinner(){
 
@@ -285,8 +240,7 @@ function checkWinner(){
                 pos2 === pos3
             ){
 
-                // Highlight Winning Boxes
-
+                
                 boxes[pattern[0]].classList.add("winner");
 
                 boxes[pattern[1]].classList.add("winner");
