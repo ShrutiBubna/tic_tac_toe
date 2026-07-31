@@ -1,0 +1,371 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#36D1DC,#5B86E5);
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    color:white;
+}
+
+/* -------------------- */
+/* Winner Popup */
+/* -------------------- */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:100;
+
+}
+
+.popup-content{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    width:350px;
+
+    animation:popup .4s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.popup-content h2{
+
+    color:#333;
+
+    margin-bottom:25px;
+
+}
+
+.hide{
+
+    display:none;
+
+}
+
+/* -------------------- */
+/* Main Container */
+/* -------------------- */
+
+.container{
+
+    width:100%;
+
+    max-width:650px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
+}
+
+/* -------------------- */
+/* Turn Indicator */
+/* -------------------- */
+
+.turn-container{
+
+    margin-bottom:25px;
+
+}
+
+.turn-container p{
+
+    font-size:1rem;
+
+    opacity:.9;
+
+}
+
+#turn-indicator{
+
+    margin-top:10px;
+
+    font-size:1.8rem;
+
+    color:#FFE66D;
+
+}
+
+/* -------------------- */
+/* Scoreboard */
+/* -------------------- */
+
+.score-board{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.score-card{
+
+    flex:1;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.score-card h3{
+
+    margin-bottom:10px;
+
+    font-size:1rem;
+
+}
+
+.score-card span{
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+}
+
+/* -------------------- */
+/* Game Board */
+/* -------------------- */
+
+.game-board{
+
+    width:420px;
+
+    height:420px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.box{
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:4rem;
+
+    font-weight:bold;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+    transition:.25s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+}
+
+.box:active{
+
+    transform:scale(.95);
+
+}
+
+/* Winner Box */
+
+.winner{
+
+    background:#4CAF50 !important;
+
+    color:white !important;
+
+}
+
+/* -------------------- */
+/* Buttons */
+/* -------------------- */
+
+.button-container{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+button{
+
+    transition:.3s;
+
+}
+
+#reset-btn,
+#reset-score-btn,
+#new-game-btn{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#333;
+
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
+
+}
+
+#reset-btn:hover,
+#reset-score-btn:hover,
+#new-game-btn:hover{
+
+    background:#222;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+
+footer{
+
+    margin-top:auto;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:.95rem;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* -------------------- */
+/* Mobile */
+/* -------------------- */
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .game-board{
+
+        width:90vw;
+
+        height:90vw;
+
+    }
+
+    .box{
+
+        font-size:3rem;
+
+    }
+
+    .score-board{
+
+        flex-direction:column;
+
+    }
+
+    .button-container{
+
+        flex-direction:column;
+
+    }
+
+}

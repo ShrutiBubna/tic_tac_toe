@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Shruti Bubna</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Winner Popup -->
+    <div class="popup hide">
+
+        <div class="popup-content">
+
+            <h2 id="winner-message">
+                🏆 Player X Wins!
+            </h2>
+
+            <button id="new-game-btn">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <h1>Tic Tac Toe</h1>
+
+        <!-- Current Turn -->
+
+        <div class="turn-container">
+
+            <p>Current Turn</p>
+
+            <h2 id="turn-indicator">
+                ⭕ Player O
+            </h2>
+
+        </div>
+
+        <!-- Scoreboard -->
+
+        <div class="score-board">
+
+            <div class="score-card">
+
+                <h3>❌ Player X </h3>
+
+                <span id="player-x-score">0</span>
+
+            </div>
+
+            <div class="score-card">
+
+                <h3>🤝 Draw</h3>
+
+                <span id="draw-score">0</span>
+
+            </div>
+
+            <div class="score-card">
+
+                <h3>⭕ Player O</h3>
+
+                <span id="player-o-score">0</span>
+
+            </div>
+
+        </div>
+
+        <!-- Game Board -->
+
+        <div class="game-board">
+
+            <button class="box" aria-label="Cell 1"></button>
+            <button class="box" aria-label="Cell 2"></button>
+            <button class="box" aria-label="Cell 3"></button>
+
+            <button class="box" aria-label="Cell 4"></button>
+            <button class="box" aria-label="Cell 5"></button>
+            <button class="box" aria-label="Cell 6"></button>
+
+            <button class="box" aria-label="Cell 7"></button>
+            <button class="box" aria-label="Cell 8"></button>
+            <button class="box" aria-label="Cell 9"></button>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="button-container">
+
+            <button id="reset-btn">
+
+                Reset Game
+
+            </button>
+
+            <button id="reset-score-btn">
+
+                Reset Score
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        Made with ❤️ by <strong>Shruti Bubna</strong>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
